@@ -26,8 +26,24 @@
           function playMp3() {
               alert('^_^， 期待早日能与你见面！');
               var media = document.getElementById('audio');
+
               media.setAttribute("src",'assets/1.mp3');
-              media.play();
+              media.addEventListener("canplaythrough", function () {
+                  media.play();
+              }, false);
+
+          }
+          window.onload = function(){
+              var media = document.getElementById('audio');
+              media.setAttribute("src",'assets/1.mp3');
+              media.addEventListener("canplaythrough", function () {
+                  media.play();
+              }, false);
+              media.addEventListener('ended', function () {
+                  setTimeout(function () {
+                      media.setAttribute("src",'assets/2.mp3');
+                      media.play(); }, 1000);
+              }, false);
           }
       </script>
   </head>
