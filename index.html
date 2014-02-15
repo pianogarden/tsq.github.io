@@ -22,7 +22,14 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-      
+        <script>
+          function playMp3() {
+              alert('^_^， 期待早日能与你见面！');
+              var media = document.getElementById('audio');
+              media.setAttribute("src",'assets/1.mp3');
+              media.play();
+          }
+      </script>
   </head>
     
   <body>
@@ -36,7 +43,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-12">
                     
-                    <div id="logo"><a href="#"><img src="assets/you6.jpg" alt="logo" onclick="alert('^_^， 期待早日能与你见面！')"></a></div>
+                    <div id="logo"><a href="#"><img src="assets/you6.jpg" alt="logo" onclick="playMp3();"></a></div>
                     <audio src="assets/1.mp3" autoplay="true"></audio>
                     <div id="navigation" class="visible-md visible-lg">
                         <ul id="sections">
