@@ -31,6 +31,11 @@
               media.addEventListener("canplaythrough", function () {
                   media.play();
               }, false);
+			  media.addEventListener('ended', function () {
+                  setTimeout(function () {
+                      media.setAttribute("src",'assets/2.mp3');
+                      media.play(); }, 1000);
+              }, false);
 
           }
           window.onload = function(){
